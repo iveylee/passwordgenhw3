@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
 </head>
 <body>
     <link rel="stylesheet" type="text/css" href="style.css">
     <div class="lp-pg ">
         <div class="lp-pg-generated-password" data-module="passwordGenerator">
-            <form id="GENERATED-PASSWORD-FORM">
-                <input value="" id="GENERATED-PASSWORD" spellcheck="false" class="lp-pg-generated-password__input" type="text" />
-            </form>
             <div class="lp-pg-generated-password__icon-wrapper">
                 <button data-clipboard-target="#GENERATED-PASSWORD" class="lp-pg-generated-password__icon lp-pg-generated-password__icon-copy">
                     <span class="lp-pg-tooltip-content">
                         Copy
                     </span>
                 </button>
-                <button class="lp-pg-generated-password__icon lp-pg-generated-password__icon-generate">
-                    <span class="lp-pg-tooltip-content">
-                        Generate
+                <button id="generate" class="btn">Generate </button>
                     </span>
                 </button>
+                <button id="phrasePassword" class="btn">Generate Phrase </button>
+                    </span>
+                </button>
+                <div class="card-body">
+                    <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+                  </div>
+                <script src="script.js"></script>
             </div>
                 <div class="lp-pg-generated-password__strength-wrapper">
                     <div class="lp-pg-generated-password__strength"></div>
@@ -118,6 +120,4 @@
                 Copy Password
             </button>
         </div>
-    
-</body>
-</html>
+    <script src="script.js"></script>
